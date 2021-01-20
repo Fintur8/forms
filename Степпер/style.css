@@ -1,0 +1,81 @@
+
+body {
+padding-top: 100px;
+font-family: Roboto;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0.1em;
+
+
+
+}
+.box {
+  width: 980px;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
+  
+}
+.step {
+  position: relative;
+  display: inline-block;
+  width: 310px;
+  height: 60px;
+  font-size: 22px;
+  line-height: 26px; 
+  }
+.step::before,
+.step::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  z-index: 1;
+  width: 20px;
+  height: 50%; 
+  background: #fff; 
+}
+.step::before {
+  top: 0;
+  transform: skewX(25deg);
+  transform-origin: 0 0;
+}
+.step::after {
+  bottom: 0;
+  transform: skewX(-25deg);
+  transform-origin: 0 100%;
+}
+.step:last-child::before,
+.step:last-child::after {
+  display: none;
+}
+.step label {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.step label input {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  
+}
+.step label .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #686868 0%, #B3B3B3 50.52%, #686868 100%);
+  color: #ffffff;
+  
+  
+}
+.step label input:checked + span {
+  background: linear-gradient(180deg, #2EA239 0%, #62FD71 50.52%, #2EA139 100%);  
+ color: #ffffff;
+}
+
